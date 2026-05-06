@@ -7,7 +7,7 @@ int main() {
     {
         for(int j = 1; j <= star; j++) // printing * star 
         {
-            printf("*");
+            printf("%d", j);
         }
         star++;
         printf("\n");
