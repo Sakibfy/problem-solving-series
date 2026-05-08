@@ -1,26 +1,44 @@
 #include <stdio.h>
 
-int main() {
-    int n, star = 1;
+int main()
+{
+    int n, s, k;
     scanf("%d", &n);
-    for (int i = 1; i <= n; i++) // printing n = line 
+
+    s = n - 1;
+    k = 1;
+
+    for (int i = 1; i <= (2*n)-1; i++)
     {
-        for(int j = 1; j <= star; j++) // printing * star 
+
+        for (int j = 1; j <=s ; j++)
         {
-            printf("%d", j);
+            printf(" ");
         }
-        star++;
+
+        for (int j = 1; j <= k; j++)
+        {
+            if(i % 2 == 0)
+            {
+              printf("-");
+            }
+            else
+            {
+                printf("#");
+            }
+        }
+        if (i < n)
+        {
+            s--;
+            k += 2;
+        }
+        else
+        {
+            s++;
+            k -= 2;
+        }
         printf("\n");
     }
-    
+
     return 0;
 }
-
-// input = n=5
-
-// output
-// *
-// **
-// ***
-// ****
-// *****

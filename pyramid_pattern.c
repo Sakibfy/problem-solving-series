@@ -1,16 +1,26 @@
 #include <stdio.h>
 
-
-
-
-
 int main() {
-    int a[5] = {1,2,3,4};
-    int *p;
+    int n, star = 1;
+    scanf("%d", &n);
+    int space = n-1;
+    for (int i = 1; i <= n; i++) 
+    {
 
-    p= a + 3;
-    *p = 5;
-    printf("%d \n", a[3]);
+        for (int k = 0; k <= space; k++)
+        {
+           printf(" ");
+        }
+        
+        for(int j = 1; j <= star; j++) 
+        {
+            printf("#");
+        }
+        printf("\n");
+        star += 2;
+        space--;
+    }
+    
     return 0;
 }
 
